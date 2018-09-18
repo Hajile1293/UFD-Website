@@ -47,6 +47,16 @@ if($name) {
 
 $write = fopen("com.txt","a+");
 fwrite($write,"<u><b> $name </b></u><br>$lastname<br>")
+fclose($write);
+
+$read = fopen("com.txt","r+t");
+echo "All members:";
+
+while(!feof($read)){
+echo fread($read, 1024);
+}
+
+
 
 }
 
