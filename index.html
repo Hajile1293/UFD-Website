@@ -55,10 +55,11 @@ echo "All members:";
 while(!feof($read)){
 echo fread($read, 1024);
 }
-
-
+fclose($read);
 
 }
+
+else{
 
 ?>
 
