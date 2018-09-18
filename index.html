@@ -66,6 +66,9 @@ echo "All members:<br>";
 while(!feof($read)){
 echo fread($read, 1024);
 }
+fclose($read);
+
+}
 ?>
 
 
