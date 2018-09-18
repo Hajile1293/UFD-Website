@@ -32,14 +32,25 @@ We want to ensure the sucess of the D-Wing for many years to come.
  <iframe src="http://www.aianmoo16.com" height="200" width="300"></iframe>
  <br>
  <br>
- <form class="keyterm">
+ <form class="keyterm" method="member">
   First Name: <br>
   <input type="text" name="firstname"><br>
   Last Name: <br>
   <input type="text" name="lastname"><br>
   <input type="submit" value="Submit">
  </form>
- 
+ <?php
+$name = $_MEMBER["firstname"];
+$lastname = $_MEMBER["lastname"];
+
+if($name) {
+
+$write = fopen("com.txt","a+");
+fwrite($write,"<u><b> $name </b></u><br>$lastname<br>")
+
+}
+
+?>
 
 
  </body> 
