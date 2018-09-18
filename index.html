@@ -50,7 +50,7 @@ fwrite($write,"<u><b> $name </b></u><br>$lastname<br>")
 fclose($write);
 
 $read = fopen("com.txt","r+t");
-echo "All members:";
+echo "All members:<br>";
 
 while(!feof($read)){
 echo fread($read, 1024);
@@ -61,7 +61,7 @@ fclose($read);
 
 else{
 $read = fopen("com.txt","r+t");
-echo "All members:";
+echo "All members:<br>";
 
 while(!feof($read)){
 echo fread($read, 1024);
